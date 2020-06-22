@@ -7,9 +7,9 @@
 ##### 优化
 ##### 执行
 
-用图表示
+逻辑示意图
 
-![示意图](/img/1.png)
+![逻辑示意图](https://github.com/karepbq/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/1.png)
 
 
 
