@@ -9,7 +9,7 @@ binlog 的写入逻辑比较简单：`事务执行过程中，先把日志写到
 
 系统给 `binlog cache` 分配了一片`内存`，每个线程一个，参数 `binlog_cache_size` 用于控制`单个线程`内 `binlog cache` 所占内存的大小。如果超过了这个参数规定的大小，就要暂存到`磁盘`。
 
-![binlog写盘状态](https://github.com/karepbq/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/binlog.png)
+![binlog写盘状态](https://github.com/kareTauren/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/binlog.png)
 
 每个线程有`自己 binlog cache`，但是共用同一份 `binlog` 文件。
 
@@ -30,7 +30,7 @@ write 和 fsync 的时机，是由参数 sync_binlog 控制的
 
 #### redo log 的写入机制
 
-![redo log 状态](https://github.com/karepbq/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/redolog_status.png)
+![redo log 状态](https://github.com/kareTauren/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/redolog_status.png)
 
 这三种状态分别是：
 1. 存在 `redo log buffer` 中，物理上是在 MySQL `进程内存中`，就是图中的红色部分；

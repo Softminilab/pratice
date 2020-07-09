@@ -40,7 +40,7 @@ mysql 的表级锁有两种：`表锁` 和 `元数据锁(meta data lock, MDL)`.
 
 事务中的 MDL 锁，在语句执行`开始时申请`，但是语句结束后并不会马上释放，而会等到整个`事务提交后再释放`
 
-![DML](https://github.com/karepbq/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/DML.jpg)
+![DML](https://github.com/kareTauren/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/DML.jpg)
 
 我们可以看到 session A 先启动，这时候会对表 t 加一个 MDL 读锁。由于 session B 需要的也是 MDL 读锁，因此可以正常执行。
 
@@ -73,7 +73,7 @@ MySQL 的行锁是在引擎层由各个引擎自己实现的,但是不代表所�
 ##### 死锁和死锁检测
 当并发系统中不同线程 `出现循环资源依赖`，涉及的线程都在 `等待别的线程释放资源时`，就会导致这`几个线程都进入无限等待的状态`，称为 `死锁`
 
-![死锁](https://github.com/karepbq/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/111.jpg)
+![死锁](https://github.com/kareTauren/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/111.jpg)
 
 这时候，事务 A 在等待事务 B 释放 id=2 的行锁，而事务 B 在等待事务 A 释放 id=1 的行锁。 事务 A 和事务 B 在互相等待对方的资源释放，就是进入了死锁状态。当出现死锁以后，有两种策略：
 

@@ -36,7 +36,7 @@ select @b-@a;
 
 这个方法是通过查看 OPTIMIZER_TRACE 的结果来确认的，你可以从 number_of_tmp_files 中看到是否使用了临时文件
 
-![DML](https://github.com/karepbq/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/optimizer_trace.png)
+![DML](https://github.com/kareTauren/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/optimizer_trace.png)
 
 
 `number_of_tmp_files` 表示的是，`排序过程中使用的临时文件数`。你一定奇怪，为什么需要 12 个文件？内存放不下时，就需要使用`外部排序`，外部排序一般使用`归并排序算法`。可以这么简单理解，MySQL 将需要排序的数据分成 12 份，每一份单独排序后存在这些临时文件中。然后把这 12 个有序文件再合并成一个有序的大文件。

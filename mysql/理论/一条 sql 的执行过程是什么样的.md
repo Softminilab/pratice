@@ -10,7 +10,7 @@
 
 逻辑示意图
 
-![逻辑示意图](https://github.com/karepbq/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/1.png)
+![逻辑示意图](https://github.com/kareTauren/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/1.png)
 
 Server 层包括连接器，查询缓存，分析器，优化器，执行器
 存储引擎层负责数据存储和提取，它支持 Innodb，MyISAM，Memory等多个存储引擎。从 5.5.5 以后默认的存储引擎是 Innodb.

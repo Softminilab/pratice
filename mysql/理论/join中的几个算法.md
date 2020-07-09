@@ -67,7 +67,7 @@ select * from t1 straight_join t2 on (t1.a=t2.b);
 3. 清空 join_buffer；
 4. 继续扫描表 t1，顺序读取最后的 12 行数据放入 join_buffer 中，继续执行第 2 步。
 
-![Block Nested-loop join 流程图](https://github.com/karepbq/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/Block_Nested_Loop_Join.jpg)
+![Block Nested-loop join 流程图](https://github.com/kareTauren/pratice/blob/master/mysql/%E7%90%86%E8%AE%BA/img/Block_Nested_Loop_Join.jpg)
 
 图中的步骤 4 和 5，表示清空 join_buffer 再复用。
 这个流程才体现出了这个算法名字中“Block”的由来，表示“分块去 join”
