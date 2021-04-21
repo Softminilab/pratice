@@ -1,0 +1,17 @@
+{
+  "debug": true,
+  "server": {
+    "addr": "localhost:9090"
+  },
+  "database": {
+    "host": "localhost",
+    "port": "3306",
+    "user": "root",
+    "pass": "123456",
+    "name": "go"
+  },
+  "redis": {
+    "addr": "localhost:6379",
+    "password": "123456"
+  }
+}
