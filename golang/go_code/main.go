@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/pkg/errors"
-	"github.com/spf13/viper"
-	"go_code/controller"
-	"go_code/model"
+	controller2 "go_code/chapter_1/controller"
+	model2 "go_code/chapter_1/model"
 	"log"
 	"net/url"
+
+	"github.com/pkg/errors"
+	"github.com/spf13/viper"
 )
 
 func init() {
@@ -42,20 +43,20 @@ func getdsn() string {
 }
 
 func main() {
-	err := model.InitDB(getdsn())
+	err := model2.InitDB(getdsn())
 	if err != nil {
 		fmt.Sprintf("origin error: %T %v\n", errors.Cause(err), errors.Cause(err))
 		fmt.Sprintf("stack track: %+v\n", err)
 	}
 
 	defer func() {
-		err := model.Close()
+		err := model2.Close()
 		if err != nil {
 			fmt.Sprintf("origin error: %T %v\n", errors.Cause(err), errors.Cause(err))
 			fmt.Sprintf("stack track: %+v\n", err)
 		}
 	}()
 
-	userCtl := new(controller.UserController)
+	userCtl := new(controller2.UserController)
 	userCtl.QueryUsers()
 }
