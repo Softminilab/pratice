@@ -1,4 +1,1 @@
 This's redis
-ppG4cgnwWrvRQpdkM3N1c0F44nH5p4rH
-F7mcchN2SnMpNSTNPWmZ7jZPBq43jkjM
-XTrbHmrBGfSfmmBNkksZx8vqj3SZ6FgQ
